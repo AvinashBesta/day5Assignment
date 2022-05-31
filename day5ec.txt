@@ -1,0 +1,52 @@
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ nano demo8.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ bash demo8.sh
+Read the lenth of rectangular part feet :
+40
+Read the bredth of rectangular part feet:
+demo8.sh: line 5: 40 * : syntax error: operand expected (error token is "* ")
+Area of plot in feet
+awk: cmd. line:1: BEGIN {print  * 0.092903 * 25}
+awk: cmd. line:1:               ^ syntax error
+Area of 25 plots in meters
+awk: cmd. line:1: BEGIN {print  * 0.000247105}
+awk: cmd. line:1:               ^ syntax error
+In acres
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ nano demo8.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ bash demo8.sh
+Read the lenth of rectangular part feet :
+40
+Read the bredth of rectangular part feet:
+60
+Area of plot in feet 2400
+Area of 25 plots in meters 5574.18
+In acres 1.37741
+
+Nano code
+#!/bin/bash
+echo "Read the lenth of rectangular part feet : "
+read l
+echo "Read the bredth of rectangular part feet: "
+read b
+a=$(($l * $b))
+echo "Area of plot in feet $a"
+meterCon=0.092903
+meter=$(awk 'BEGIN {print '$a' * '$meterCon' * '25'}')
+echo "Area of 25 plots in meters $meter"
+Sqmetertoacre=0.000247105
+acre=$(awk 'BEGIN {print '$meter' * '$Sqmetertoacre'}')
+echo "In acres $acre"
+
+
+
+
+
+
+
+

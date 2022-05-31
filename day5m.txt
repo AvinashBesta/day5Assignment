@@ -1,0 +1,71 @@
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ nano c.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ bash c.sh
+Enter Three numbers :
+1
+4
+8
+1
+1. a + b * c = 33
+2. a % b + c = 9
+3. c + a / b = 1
+4. a * b + c = 12
+c.sh: line 22: syntax error near unexpected token `then'
+c.sh: line 22: `then '
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ nano c.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ nano c.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ bash c.sh
+Enter Three numbers :
+111
+2
+3
+111
+1. a + b * c = 117
+2. a % b + c = 4
+3. c + a / b = 111
+4. a * b + c = 225
+Maximum value in above arethmatic opration : 225
+Minimum value in above arethmatic opration : 4
+ 
+
+Nano code
+
+echo "Enter Three numbers : "
+read a
+read b
+read c
+arry[0]=$(awk 'BEGIN {print '$a' + '$b' * '$c'}')
+arry[1]=$(awk 'BEGIN {print '$a' % '$b' + '$c'}')
+arry[2]=`expr $a + $b / $c`
+a=`expr $a + $b / $c`
+echo $a
+arry[3]=$(awk 'BEGIN {print '$a' * '$b' + '$c'}')
+echo "1. a + b * c = ${arry[0]}"
+echo "2. a % b + c = ${arry[1]}"
+echo "3. c + a / b = ${arry[2]}"
+echo "4. a * b + c = ${arry[3]}"
+max=0
+min=10000
+for i in "${arry[@]}"
+do
+if [ $i -gt $max ]
+then
+max=$i
+fi
+if [ $i -lt $min ]
+then
+min=$i
+fi
+done
+echo "Maximum value in above arethmatic opration : $max"
+echo "Minimum value in above arethmatic opration : $min"
+
+

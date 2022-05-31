@@ -1,0 +1,48 @@
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ nano demo7.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ bash demo7.sh
+Read the lenth of rectangular part feet :
+7
+Read the bredth of rectangular part feet:
+demo7.sh: line 5: 7 * : syntax error: operand expected (error token is "* ")
+Area of plot in feet
+awk: cmd. line:1: BEGIN {print  * 0.092903}
+awk: cmd. line:1:               ^ syntax error
+ Area in meters
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ nano demo7.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ bash demo7.sh
+Read the lenth of rectangular part feet :
+40
+Read the bredth of rectangular part feet:
+60
+Area of plot in feet 2400
+ Area in meters 222.967
+
+
+Nano code 
+                                                                                demo7.sh
+#!/bin/bash
+echo "Read the lenth of rectangular part feet : "
+read l
+echo "Read the bredth of rectangular part feet: "
+read b
+a=$(($l * $b))
+echo "Area of plot in feet $a"
+meterCon=0.092903
+meter=$(awk 'BEGIN {print '$a' * '$meterCon'}')
+echo " Area in meters $meter"
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,27 @@
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ nano   demo12.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ bash demo12.sh
+4
+Head
+
+Nano code
+
+
+                                                                               demo12.sh
+#!/bin/bash
+a=$((RANDOM%10))
+echo $a
+Q=`expr $a % 2`
+if [ $Q -eq 0 ]
+then
+echo "Head"
+else
+echo "Tail"
+fi
+
+
+
+
+

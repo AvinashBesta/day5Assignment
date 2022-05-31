@@ -1,0 +1,51 @@
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ nano demo5.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ bash demo5.sh
+Enter the Total no you want to enter:n=5
+demo5.sh: line 4: [: 0: unary operator expected
+Output :
+Addition of five number :  0
+expr: syntax error: missing argument after ‘/’
+Average of five number :
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ nano demo5.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ bash demo5.sh
+Enter the Total no you want to enter:
+Output :
+73
+63
+31
+35
+37
+Addition of five number :  239
+Average of five number :  47
+
+
+Nano code
+
+#!/bin/bash
+echo "Enter the Total no you want to enter:"
+n=5
+i=0
+while [ $i -lt $n ]
+do
+a[$i]=$((RANDOM%100))
+i=`expr $i + 1`
+done
+sub=0
+echo "Output :"
+for i in "${a[@]}"
+do
+echo $i
+sub=`expr $sub + $i`
+#echo "Addition of five number : " $sub
+done
+add=o
+echo "Addition of five number : " $sub
+avg=`expr $sub / $n`
+echo "Average of five number : " $avg

@@ -1,0 +1,52 @@
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ nano a.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ nano a.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ bash a.sh
+Enter the single digit number :
+9
+This is not week day.
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ bash a.sh
+Enter the single digit number :
+3
+Tuseday
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$
+
+Nano code
+
+                                                                                    a.sh
+#!/bin/bash -x
+echo "Enter the single digit number : "
+read n
+if [ $n -eq 1 ]
+then
+echo "Sunday"
+elif [ $n -eq 2 ]
+then
+echo "Monday"
+elif [ $n -eq 3 ]
+then
+echo "Tuseday"
+elif [ $n -eq 4 ]
+then
+echo "Wednesday"
+elif [ $n -eq 5 ]
+then
+echo "Thursday"
+elif [ $n -eq 6 ]
+then
+echo "Friday"
+elif [ $n -eq 7 ]
+then
+echo "Saturday"
+else
+echo "This is not week day."
+fi
+

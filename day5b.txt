@@ -1,0 +1,24 @@
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ touch demo2.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ nano demo2.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ bash demo2.sh
+2
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$
+
+
+Nano code
+                                                                                  demo2.sh
+#!/bin/bash
+a=$((RANDOM%6))
+echo $a
+
+
+
+
