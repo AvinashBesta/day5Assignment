@@ -1,0 +1,29 @@
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ mkdir day4 assignment
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~
+$ cd desktop
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ touch demo.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ nano demo.sh
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$ bash demo.sh
+9
+
+ADI@DESKTOP-QOAUI48 MINGW64 ~/desktop
+$
+
+
+Nano code
+
+#!/bin/bash
+a=$((RANDOM%10))
+echo $a
+
+
+
